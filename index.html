@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Runway System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Airport Runway System</h1>
+
+        <div class="form">
+            <h2>Add Flight Request</h2>
+            <input type="text" id="flightID" placeholder="Enter Flight ID">
+            <label>
+                <input type="radio" name="type" value="landing" checked> Landing
+            </label>
+            <label>
+                <input type="radio" name="type" value="takeoff"> Takeoff
+            </label>
+            <label>
+                <input type="checkbox" id="critical"> Critical Landing
+            </label>
+            <button onclick="addFlight()">Add Flight</button>
+        </div>
+
+        <div class="actions">
+            <button onclick="processFlight()">Process Next Flight</button>
+            <button onclick="checkPending()">Check Pending Flights</button>
+        </div>
+
+        <div class="output">
+            <h2>Status</h2>
+            <p id="status">No actions yet.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
